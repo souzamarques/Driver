@@ -6,20 +6,14 @@ public class Delivery : MonoBehaviour
 {
     [SerializeField] Color32 packageColor = new Color32(1, 1, 1, 1);
     [SerializeField] Color32 noPackageColor = new Color32(1, 1, 1, 1);
-
     SpriteRenderer spriteRenderer;
-
-    void Start()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
 
     bool hasPackage = false;
     [SerializeField] float destroyDelay = 0.7f;
 
-    void OnCollisionEnter2D(Collision2D other)
+    void Start()
     {
-        //Debug.Log("Hit");
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
